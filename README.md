@@ -16,4 +16,4 @@ Badges from all my projects in one README.
 | name | version | build | dependencies | dev dependencies |
 | ---- | ------- | ----- | ------------ | ---------------- |
 | offensive.js | [![NPM version][offensive-npm-image]][offensive-npm-url] | [![Build Status][offensive-travis-image]][offensive-travis-url] | [![Dependency Status][offensive-david-image]][offensive-david-url] | [![devDependency Status][offensive-david-image-dev]][offensive-david-url-dev] |
-
+| HyperText Slider | [![NPM version](https://badge.fury.io/js/hyper-text-slider.svg)](https://npmjs.org/package/hyper-text-slider) | [![Build Status](https://travis-ci.org/muroc/hyper-text-slider.svg?branch=master)](https://travis-ci.org/muroc/hyper-text-slider) | [![Dependency Status](https://david-dm.org/muroc/hyper-text-slider.svg)](https://david-dm.org/muroc/hyper-text-slider) | [![devDependency Status](https://david-dm.org/muroc/hyper-text-slider/dev-status.svg)](https://david-dm.org/muroc/hyper-text-slider?type=dev) |
