@@ -46,6 +46,15 @@ Badges from all my projects in one README.
 [hts-nt-npm-url]: https://npmjs.org/package/hyper-text-slider-node-tutorial
 [hts-nt-npm-image]: https://badge.fury.io/js/hyper-text-slider-node-tutorial.svg
 
+[gulp-markdox2-travis-url]: http://travis-ci.org/muroc/gulp-markdox2
+[gulp-markdox2-travis-image]: https://img.shields.io/travis/muroc/gulp-markdox2.svg?maxAge=2592000
+[gulp-markdox2-david-url]: https://david-dm.org/muroc/gulp-markdox2
+[gulp-markdox2-david-image]: https://david-dm.org/muroc/gulp-markdox2.svg
+[gulp-markdox2-david-url-dev]: https://david-dm.org/muroc/gulp-markdox2?type=dev
+[gulp-markdox2-david-image-dev]: https://david-dm.org/muroc/gulp-markdox2/dev-status.svg
+[gulp-markdox2-npm-url]: https://npmjs.org/package/gulp-markdox2
+[gulp-markdox2-npm-image]: https://badge.fury.io/js/gulp-markdox2.svg
+
 | name | version | build | dependencies | dev dependencies |
 | ---- | ------- | ----- | ------------ | ---------------- |
 | offensive.js | [![NPM version][offensive-npm-image]][offensive-npm-url] | [![Build Status][offensive-travis-image]][offensive-travis-url] | [![Dependency Status][offensive-david-image]][offensive-david-url] | [![devDependency Status][offensive-david-image-dev]][offensive-david-url-dev] |
@@ -54,3 +63,4 @@ Badges from all my projects in one README.
 | mdl-compat | [![NPM version][mdl-compat-npm-image]][mdl-compat-npm-url] | [![Build Status][mdl-compat-travis-image]][mdl-compat-travis-url] | [![Dependency Status][mdl-compat-david-image]][mdl-compat-david-url] | [![devDependency Status][mdl-compat-david-image-dev]][mdl-compat-david-url-dev] |
 | wson-event-connector | [![NPM version][wson-ec-npm-image]][wson-ec-npm-url] | [![Build Status][wson-ec-travis-image]][wson-ec-travis-url] | [![Dependency Status][wson-ec-david-image]][wson-ec-david-url] | [![devDependency Status][wson-ec-david-image-dev]][wson-ec-david-url-dev] |
 | wson-dom-connector | [![NPM version][wson-dc-npm-image]][wson-dc-npm-url] | [![Build Status][wson-dc-travis-image]][wson-dc-travis-url] | [![Dependency Status][wson-dc-david-image]][wson-dc-david-url] | [![devDependency Status][wson-dc-david-image-dev]][wson-dc-david-url-dev] | 
+| gulp-markdox2 | [![NPM version][gulp-markdox2-npm-image]][gulp-markdox2-npm-url] | [![Build Status][gulp-markdox2-travis-image]][gulp-markdox2-travis-url] | [![Dependency Status][gulp-markdox2-david-image]][gulp-markdox2-david-url] | [![devDependency Status][gulp-markdox2-david-image-dev]][gulp-markdox2-david-url-dev] | [![License][gulp-markdox2-license-image]][gulp-markdox2-license-url] | 
