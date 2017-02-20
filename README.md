@@ -13,7 +13,21 @@ Badges from all my projects in one README.
 [offensive-npm-url]: https://npmjs.org/package/offensive
 [offensive-npm-image]: https://badge.fury.io/js/offensive.svg
 
+[mdl-compat-travis-url]: http://travis-ci.org/muroc/mdl-compat
+[mdl-compat-travis-image]: https://secure.travis-ci.org/muroc/mdl-compat.png?branch=master
+
+[mdl-compat-david-url]: https://david-dm.org/muroc/mdl-compat
+[mdl-compat-david-image]: https://david-dm.org/muroc/mdl-compat.svg
+
+[mdl-compat-david-url-dev]: https://david-dm.org/muroc/mdl-compat?type=dev
+[mdl-compat-david-image-dev]: https://david-dm.org/muroc/mdl-compat/dev-status.svg
+
+[mdl-compat-npm-url]: https://npmjs.org/package/mdl-compat
+[mdl-compat-npm-image]: https://badge.fury.io/js/mdl-compat.svg
+
+
 | name | version | build | dependencies | dev dependencies |
 | ---- | ------- | ----- | ------------ | ---------------- |
 | offensive.js | [![NPM version][offensive-npm-image]][offensive-npm-url] | [![Build Status][offensive-travis-image]][offensive-travis-url] | [![Dependency Status][offensive-david-image]][offensive-david-url] | [![devDependency Status][offensive-david-image-dev]][offensive-david-url-dev] |
-| HyperText Slider | [![NPM version](https://badge.fury.io/js/hyper-text-slider.svg)](https://npmjs.org/package/hyper-text-slider) | [![Build Status](https://travis-ci.org/muroc/hyper-text-slider.svg?branch=master)](https://travis-ci.org/muroc/hyper-text-slider) | [![Dependency Status](https://david-dm.org/muroc/hyper-text-slider.svg)](https://david-dm.org/muroc/hyper-text-slider) | [![devDependency Status](https://david-dm.org/muroc/hyper-text-slider/dev-status.svg)](https://david-dm.org/muroc/hyper-text-slider?type=dev) |
+| hyper-text-slider | [![NPM version](https://badge.fury.io/js/hyper-text-slider.svg)](https://npmjs.org/package/hyper-text-slider) | [![Build Status](https://travis-ci.org/muroc/hyper-text-slider.svg?branch=master)](https://travis-ci.org/muroc/hyper-text-slider) | [![Dependency Status](https://david-dm.org/muroc/hyper-text-slider.svg)](https://david-dm.org/muroc/hyper-text-slider) | [![devDependency Status](https://david-dm.org/muroc/hyper-text-slider/dev-status.svg)](https://david-dm.org/muroc/hyper-text-slider?type=dev) |
+| mdl-compat | [![NPM version][mdl-compat-npm-image]][mdl-compat-npm-url] | [![Build Status][mdl-compat-travis-image]][mdl-compat-travis-url] | [![Dependency Status][mdl-compat-david-image]][mdl-compat-david-url] | [![devDependency Status][mdl-compat-david-image-dev]][mdl-compat-david-url-dev]
