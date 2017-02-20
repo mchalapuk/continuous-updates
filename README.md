@@ -37,9 +37,23 @@ Badges from all my projects in one README.
 [wson-ec-npm-url]: https://npmjs.org/package/wson-event-connector
 [wson-ec-npm-image]: https://badge.fury.io/js/wson-event-connector.svg
 
+[wson-dc-travis-url]: http://travis-ci.org/muroc/wson-dom-connector
+[wson-dc-travis-image]: https://api.travis-ci.org/muroc/wson-dom-connector.svg
+
+[wson-dc-david-url]: https://david-dm.org/muroc/wson-dom-connector
+[wson-dc-david-image]: https://david-dm.org/muroc/wson-dom-connector.svg
+
+[wson-dc-david-url-dev]: https://david-dm.org/muroc/wson-dom-connector?type=dev
+[wson-dc-david-image-dev]: https://david-dm.org/muroc/wson-dom-connector/dev-status.svg
+
+[wson-dc-npm-url]: https://npmjs.org/package/wson-dom-connector
+[wson-dc-npm-image]: https://badge.fury.io/js/wson-dom-connector.svg
+
+
 | name | version | build | dependencies | dev dependencies |
 | ---- | ------- | ----- | ------------ | ---------------- |
 | offensive.js | [![NPM version][offensive-npm-image]][offensive-npm-url] | [![Build Status][offensive-travis-image]][offensive-travis-url] | [![Dependency Status][offensive-david-image]][offensive-david-url] | [![devDependency Status][offensive-david-image-dev]][offensive-david-url-dev] |
 | hyper-text-slider | [![NPM version](https://badge.fury.io/js/hyper-text-slider.svg)](https://npmjs.org/package/hyper-text-slider) | [![Build Status](https://travis-ci.org/muroc/hyper-text-slider.svg?branch=master)](https://travis-ci.org/muroc/hyper-text-slider) | [![Dependency Status](https://david-dm.org/muroc/hyper-text-slider.svg)](https://david-dm.org/muroc/hyper-text-slider) | [![devDependency Status](https://david-dm.org/muroc/hyper-text-slider/dev-status.svg)](https://david-dm.org/muroc/hyper-text-slider?type=dev) |
 | mdl-compat | [![NPM version][mdl-compat-npm-image]][mdl-compat-npm-url] | [![Build Status][mdl-compat-travis-image]][mdl-compat-travis-url] | [![Dependency Status][mdl-compat-david-image]][mdl-compat-david-url] | [![devDependency Status][mdl-compat-david-image-dev]][mdl-compat-david-url-dev] |
 | wson-event-connector | [![NPM version][wson-ec-npm-image]][wson-ec-npm-url] | [![Build Status][wson-ec-travis-image]][wson-ec-travis-url] | [![Dependency Status][wson-ec-david-image]][wson-ec-david-url] | [![devDependency Status][wson-ec-david-image-dev]][wson-ec-david-url-dev] |
+wson-dom-connector | [![NPM version][wson-dc-npm-image]][wson-dc-npm-url] | [![Build Status][wson-dc-travis-image]][wson-dc-travis-url] | [![Dependency Status][wson-dc-david-image]][wson-dc-david-url] | [![devDependency Status][wson-dc-david-image-dev]][wson-dc-david-url-dev] | 
