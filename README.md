@@ -1,6 +1,17 @@
 # projects-dashboard
 Badges from all my projects in one README.
 
+| name | version | build | dependencies | dev dependencies |
+| ---- | ------- | ----- | ------------ | ---------------- |
+| offensive.js | [![NPM version][offensive-npm-image]][offensive-npm-url] | [![Build Status][offensive-travis-image]][offensive-travis-url] | [![Dependency Status][offensive-david-image]][offensive-david-url] | [![devDependency Status][offensive-david-image-dev]][offensive-david-url-dev] |
+| hyper-text-slider | [![NPM version](https://badge.fury.io/js/hyper-text-slider.svg)](https://npmjs.org/package/hyper-text-slider) | [![Build Status](https://travis-ci.org/muroc/hyper-text-slider.svg?branch=master)](https://travis-ci.org/muroc/hyper-text-slider) | [![Dependency Status](https://david-dm.org/muroc/hyper-text-slider.svg)](https://david-dm.org/muroc/hyper-text-slider) | [![devDependency Status](https://david-dm.org/muroc/hyper-text-slider/dev-status.svg)](https://david-dm.org/muroc/hyper-text-slider?type=dev) |
+| hyper-text-slider-node-tutorial | [![NPM Version][hts-nt-npm-image]][hts-nt-npm-url] | [![Build Status][hts-nt-travis-image]][hts-nt-travis-url] | [![Dependency Status][hts-nt-david-image]][hts-nt-david-url] | [![devDependency Status][hts-nt-david-image-dev]][hts-nt-david-url-dev] | 
+| mdl-compat | [![NPM version][mdl-compat-npm-image]][mdl-compat-npm-url] | [![Build Status][mdl-compat-travis-image]][mdl-compat-travis-url] | [![Dependency Status][mdl-compat-david-image]][mdl-compat-david-url] | [![devDependency Status][mdl-compat-david-image-dev]][mdl-compat-david-url-dev] |
+| wson-event-connector | [![NPM version][wson-ec-npm-image]][wson-ec-npm-url] | [![Build Status][wson-ec-travis-image]][wson-ec-travis-url] | [![Dependency Status][wson-ec-david-image]][wson-ec-david-url] | [![devDependency Status][wson-ec-david-image-dev]][wson-ec-david-url-dev] |
+| wson-dom-connector | [![NPM version][wson-dc-npm-image]][wson-dc-npm-url] | [![Build Status][wson-dc-travis-image]][wson-dc-travis-url] | [![Dependency Status][wson-dc-david-image]][wson-dc-david-url] | [![devDependency Status][wson-dc-david-image-dev]][wson-dc-david-url-dev] | 
+| gulp-markdox2 | [![NPM version][gulp-markdox2-npm-image]][gulp-markdox2-npm-url] | [![Build Status][gulp-markdox2-travis-image]][gulp-markdox2-travis-url] | [![Dependency Status][gulp-markdox2-david-image]][gulp-markdox2-david-url] | [![devDependency Status][gulp-markdox2-david-image-dev]][gulp-markdox2-david-url-dev] | [![License][gulp-markdox2-license-image]][gulp-markdox2-license-url] | 
+| gulp-query-selector | [![NPM version][gulp-qs-npm-image]][gulp-qs-npm-url] | [![Build Status][gulp-qs-travis-image]][gulp-qs-travis-url] | [![Dependency Status][gulp-qs-david-image]][gulp-qs-david-url] | [![devDependency Status][gulp-qs-david-image-dev]][gulp-qs-david-url-dev] |
+
 [offensive-travis-url]: http://travis-ci.org/muroc/offensive.js
 [offensive-travis-image]: https://travis-ci.org/muroc/offensive.js.svg?branch=master
 [offensive-david-url]: https://david-dm.org/muroc/offensive.js
@@ -55,12 +66,11 @@ Badges from all my projects in one README.
 [gulp-markdox2-npm-url]: https://npmjs.org/package/gulp-markdox2
 [gulp-markdox2-npm-image]: https://badge.fury.io/js/gulp-markdox2.svg
 
-| name | version | build | dependencies | dev dependencies |
-| ---- | ------- | ----- | ------------ | ---------------- |
-| offensive.js | [![NPM version][offensive-npm-image]][offensive-npm-url] | [![Build Status][offensive-travis-image]][offensive-travis-url] | [![Dependency Status][offensive-david-image]][offensive-david-url] | [![devDependency Status][offensive-david-image-dev]][offensive-david-url-dev] |
-| hyper-text-slider | [![NPM version](https://badge.fury.io/js/hyper-text-slider.svg)](https://npmjs.org/package/hyper-text-slider) | [![Build Status](https://travis-ci.org/muroc/hyper-text-slider.svg?branch=master)](https://travis-ci.org/muroc/hyper-text-slider) | [![Dependency Status](https://david-dm.org/muroc/hyper-text-slider.svg)](https://david-dm.org/muroc/hyper-text-slider) | [![devDependency Status](https://david-dm.org/muroc/hyper-text-slider/dev-status.svg)](https://david-dm.org/muroc/hyper-text-slider?type=dev) |
-| hyper-text-slider-node-tutorial | [![NPM Version][hts-nt-npm-image]][hts-nt-npm-url] | [![Build Status][hts-nt-travis-image]][hts-nt-travis-url] | [![Dependency Status][hts-nt-david-image]][hts-nt-david-url] | [![devDependency Status][hts-nt-david-image-dev]][hts-nt-david-url-dev] | 
-| mdl-compat | [![NPM version][mdl-compat-npm-image]][mdl-compat-npm-url] | [![Build Status][mdl-compat-travis-image]][mdl-compat-travis-url] | [![Dependency Status][mdl-compat-david-image]][mdl-compat-david-url] | [![devDependency Status][mdl-compat-david-image-dev]][mdl-compat-david-url-dev] |
-| wson-event-connector | [![NPM version][wson-ec-npm-image]][wson-ec-npm-url] | [![Build Status][wson-ec-travis-image]][wson-ec-travis-url] | [![Dependency Status][wson-ec-david-image]][wson-ec-david-url] | [![devDependency Status][wson-ec-david-image-dev]][wson-ec-david-url-dev] |
-| wson-dom-connector | [![NPM version][wson-dc-npm-image]][wson-dc-npm-url] | [![Build Status][wson-dc-travis-image]][wson-dc-travis-url] | [![Dependency Status][wson-dc-david-image]][wson-dc-david-url] | [![devDependency Status][wson-dc-david-image-dev]][wson-dc-david-url-dev] | 
-| gulp-markdox2 | [![NPM version][gulp-markdox2-npm-image]][gulp-markdox2-npm-url] | [![Build Status][gulp-markdox2-travis-image]][gulp-markdox2-travis-url] | [![Dependency Status][gulp-markdox2-david-image]][gulp-markdox2-david-url] | [![devDependency Status][gulp-markdox2-david-image-dev]][gulp-markdox2-david-url-dev] | [![License][gulp-markdox2-license-image]][gulp-markdox2-license-url] | 
+[gulp-qs-travis-url]: http://travis-ci.org/muroc/gulp-query-selector
+[gulp-qs-travis-image]: https://secure.travis-ci.org/muroc/gulp-query-selector.png?branch=master
+[gulp-qs-david-url]: https://david-dm.org/muroc/gulp-query-selector
+[gulp-qs-david-image]: https://david-dm.org/muroc/gulp-query-selector.svg
+[gulp-qs-david-url-dev]: https://david-dm.org/muroc/gulp-query-selector?type=dev
+[gulp-qs-david-image-dev]: https://david-dm.org/muroc/gulp-query-selector/dev-status.svg
+[gulp-qs-npm-url]: https://npmjs.org/package/gulp-query-selector
+[gulp-qs-npm-image]: https://badge.fury.io/js/gulp-query-selector.svg
