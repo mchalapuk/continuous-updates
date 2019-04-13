@@ -4,7 +4,7 @@ Badges from all my projects in one README.
 | name | version | build | dependencies | dev dependencies |
 | ---- | ------- | ----- | ------------ | ---------------- |
 | offensive.js | [![NPM version][offensive-npm-image]][offensive-npm-url] | [![Build Status][offensive-travis-image]][offensive-travis-url] | [![Dependency Status][offensive-david-image]][offensive-david-url] | [![devDependency Status][offensive-david-image-dev]][offensive-david-url-dev] |
-| hyper-text-slider | [![NPM version](https://badge.fury.io/js/hyper-text-slider.svg)](https://npmjs.org/package/hyper-text-slider) | [![Build Status](https://travis-ci.org/muroc/hyper-text-slider.svg?branch=master)](https://travis-ci.org/muroc/hyper-text-slider) | [![Dependency Status](https://david-dm.org/muroc/hyper-text-slider.svg)](https://david-dm.org/muroc/hyper-text-slider) | [![devDependency Status](https://david-dm.org/muroc/hyper-text-slider/dev-status.svg)](https://david-dm.org/muroc/hyper-text-slider?type=dev) |
+| hyper-text-slider | [![NPM version][slider-npm-image]][slider-npm-url] | [![Build Status][slider-travis-image]][slider-travis-url] | [![Dependency Status][slider-david-image]][slider-david-url] | [![devDependency Status][slider-david-image-dev]][slider-david-url-dev] |
 | hyper-text-slider-nod... | [![NPM Version][hts-nt-npm-image]][hts-nt-npm-url] | [![Build Status][hts-nt-travis-image]][hts-nt-travis-url] | [![Dependency Status][hts-nt-david-image]][hts-nt-david-url] | [![devDependency Status][hts-nt-david-image-dev]][hts-nt-david-url-dev] | 
 | mdl-compat | [![NPM version][mdl-compat-npm-image]][mdl-compat-npm-url] | [![Build Status][mdl-compat-travis-image]][mdl-compat-travis-url] | [![Dependency Status][mdl-compat-david-image]][mdl-compat-david-url] | [![devDependency Status][mdl-compat-david-image-dev]][mdl-compat-david-url-dev] |
 | wson-event-connector | [![NPM version][wson-ec-npm-image]][wson-ec-npm-url] | [![Build Status][wson-ec-travis-image]][wson-ec-travis-url] | [![Dependency Status][wson-ec-david-image]][wson-ec-david-url] | [![devDependency Status][wson-ec-david-image-dev]][wson-ec-david-url-dev] |
@@ -20,6 +20,15 @@ Badges from all my projects in one README.
 [offensive-david-image-dev]: https://david-dm.org/mchalapuk/offensive.js/dev-status.svg
 [offensive-npm-url]: https://npmjs.org/package/offensive
 [offensive-npm-image]: https://badge.fury.io/js/offensive.svg
+
+[slider-travis-url]: https://travis-ci.org/mchalapuk/hyper-text-slider
+[slider-travis-image]: https://travis-ci.org/mchalapuk/hyper-text-slider.svg?branch=master
+[slider-david-url]: https://david-dm.org/mchalapuk/hyper-text-slider
+[slider-david-image]: https://david-dm.org/mchalapuk/hyper-text-slider.svg
+[slider-david-url-dev]: https://david-dm.org/mchalapuk/hyper-text-slider?type=dev
+[slider-david-image-dev]: https://david-dm.org/mchalapuk/hyper-text-slider/dev-status.svg
+[slider-npm-url]: https://npmjs.org/package/hyper-text-slider
+[slider-npm-image]: https://badge.fury.io/js/hyper-text-slider.svg
 
 [mdl-compat-travis-url]: http://travis-ci.org/mchalapuk/mdl-compat
 [mdl-compat-travis-image]: https://secure.travis-ci.org/mchalapuk/mdl-compat.png?branch=master
