@@ -1,5 +1,6 @@
-# projects-dashboard
-Badges from all my projects in one README.
+# Continuous Updates
+
+> Automation for continuously updating NPM dependencies
 
 | name | version | build | dependencies | dev dependencies |
 | ---- | ------- | ----- | ------------ | ---------------- |
@@ -83,3 +84,4 @@ Badges from all my projects in one README.
 [gulp-qs-david-image-dev]: https://david-dm.org/mchalapuk/gulp-query-selector/dev-status.svg
 [gulp-qs-npm-url]: https://npmjs.org/package/gulp-query-selector
 [gulp-qs-npm-image]: https://badge.fury.io/js/gulp-query-selector.svg
+
