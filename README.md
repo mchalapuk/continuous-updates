@@ -1,10 +1,10 @@
 # Continuous Updates
 
-> Automation for continuously updating NPM dependencies
+> Automation for updating NPM dependencies
 
 | name | version | build | dependencies | dev dependencies |
 | ---- | ------- | ----- | ------------ | ---------------- |
-| offensive.js | [![NPM version][offensive-npm-image]][offensive-npm-url] | [![Build Status][offensive-travis-image]][offensive-travis-url] | [![Dependency Status][offensive-david-image]][offensive-david-url] | [![devDependency Status][offensive-david-image-dev]][offensive-david-url-dev] |
+| [offensive.js][offensive-repo-url] | [![NPM version][offensive-npm-image]][offensive-npm-url] | [![Build Status][offensive-travis-image]][offensive-travis-url] | [![Dependency Status][offensive-david-image]][offensive-david-url] | [![devDependency Status][offensive-david-image-dev]][offensive-david-url-dev] |
 | hyper-text-slider | [![NPM version][slider-npm-image]][slider-npm-url] | [![Build Status][slider-travis-image]][slider-travis-url] | [![Dependency Status][slider-david-image]][slider-david-url] | [![devDependency Status][slider-david-image-dev]][slider-david-url-dev] |
 | hyper-text-slider-nod... | [![NPM Version][hts-nt-npm-image]][hts-nt-npm-url] | [![Build Status][hts-nt-travis-image]][hts-nt-travis-url] | [![Dependency Status][hts-nt-david-image]][hts-nt-david-url] | [![devDependency Status][hts-nt-david-image-dev]][hts-nt-david-url-dev] | 
 | mdl-compat | [![NPM version][mdl-compat-npm-image]][mdl-compat-npm-url] | [![Build Status][mdl-compat-travis-image]][mdl-compat-travis-url] | [![Dependency Status][mdl-compat-david-image]][mdl-compat-david-url] | [![devDependency Status][mdl-compat-david-image-dev]][mdl-compat-david-url-dev] |
@@ -13,6 +13,7 @@
 | gulp-markdox | [![NPM version][gulp-markdox-npm-image]][gulp-markdox-npm-url] | [![Build Status][gulp-markdox-travis-image]][gulp-markdox-travis-url] | [![Dependency Status][gulp-markdox-david-image]][gulp-markdox-david-url] | [![devDependency Status][gulp-markdox-david-image-dev]][gulp-markdox-david-url-dev] | [![License][gulp-markdox-license-image]][gulp-markdox-license-url] | 
 | gulp-query-selector | [![NPM version][gulp-qs-npm-image]][gulp-qs-npm-url] | [![Build Status][gulp-qs-travis-image]][gulp-qs-travis-url] | [![Dependency Status][gulp-qs-david-image]][gulp-qs-david-url] | [![devDependency Status][gulp-qs-david-image-dev]][gulp-qs-david-url-dev] |
 
+[offensive-repo-url]: https://github.com/mchalapuk/offensive.js
 [offensive-travis-url]: http://travis-ci.org/mchalapuk/offensive.js
 [offensive-travis-image]: https://api.travis-ci.org/mchalapuk/offensive.js.svg?branch=master
 [offensive-david-url]: https://david-dm.org/mchalapuk/offensive.js
