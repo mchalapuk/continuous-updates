@@ -2,8 +2,8 @@
 
 > Automation for updating NPM dependencies
 
-| name | version | build | dependencies | dev dependencies |
-| ---- | ------- | ----- | ------------ | ---------------- |
+| package | version | build | dependencies | dev dependencies |
+| ------- | ------- | ----- | ------------ | ---------------- |
 | [offensive.js][offensive-repo-url] | [![NPM version][offensive-npm-image]][offensive-npm-url] | [![Build Status][offensive-travis-image]][offensive-travis-url] | [![Dependency Status][offensive-david-image]][offensive-david-url] | [![devDependency Status][offensive-david-image-dev]][offensive-david-url-dev] |
 | hyper-text-slider | [![NPM version][slider-npm-image]][slider-npm-url] | [![Build Status][slider-travis-image]][slider-travis-url] | [![Dependency Status][slider-david-image]][slider-david-url] | [![devDependency Status][slider-david-image-dev]][slider-david-url-dev] |
 | hyper-text-slider-nod... | [![NPM Version][hts-nt-npm-image]][hts-nt-npm-url] | [![Build Status][hts-nt-travis-image]][hts-nt-travis-url] | [![Dependency Status][hts-nt-david-image]][hts-nt-david-url] | [![devDependency Status][hts-nt-david-image-dev]][hts-nt-david-url-dev] | 
