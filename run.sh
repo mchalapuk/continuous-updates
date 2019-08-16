@@ -32,6 +32,8 @@ npm install
 npm outdated
 
 updtr -t "npm run $TEST_TASK"
+test -z $(npm outdated) || exit 1
+
 npm run $DEPLOY_TASK
 
 git add .
