@@ -31,12 +31,19 @@ cd $FOLDER
 npm install
 npm outdated
 
+echo -n "Updating dependencies..."
 updtr -t "npm run $TEST_TASK"
 test -z $(npm outdated) || exit 1
+echo " [success]"
 
-npm run $DEPLOY_TASK
+echo -n "Deploying new version to npm..."
+npm version patch
+npm run $DEPLOY_TASK >/dev/null
+echo " [success]"
 
+echo -n "Pushing changes to git..."
 git add .
 git commit -m "~ updated depdendencies"
 git push
+echo " [success]"
 
