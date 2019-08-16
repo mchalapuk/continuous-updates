@@ -32,7 +32,7 @@ npm install
 npm outdated || true
 
 echo -n "Updating dependencies..."
-updtr -t "npm run $TEST_TASK"
+updtr -t "npm run $TEST_TASK" -r none
 test -z $(npm outdated) || exit 1
 echo " [success]"
 
