@@ -20,7 +20,7 @@ cwd(WORKSPACE);
 const status = config.pkgs
   .map(run)
   .reduce((a, b) => a + b);
-system.exit(status);
+process.exit(status);
 
 function log(msg) {
   process.stdout.write(msg);
