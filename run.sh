@@ -47,7 +47,7 @@ updtr -t "npm run $TEST_TASK" -r none
 if [ -n "$(npm outdated)" ]
 then
   echo " [failure]"
-  echo "Detected outdated after update..." >&2
+  echo "Detected outdated dependencies after update..." >&2
   npm outdated || true
   exit 1
 fi
