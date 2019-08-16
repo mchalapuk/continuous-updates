@@ -62,7 +62,7 @@ echo -n "Applying new version... "
 npm version patch
 
 echo -n "Deploying new version to npm..."
-npm run $DEPLOY_TASK >/dev/null
+npm run $DEPLOY_TASK >/dev/null 2>&1
 echo " [success]"
 
 echo -n "Pushing changes to git..."
