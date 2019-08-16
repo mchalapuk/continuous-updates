@@ -3,3 +3,4 @@ pkgs:
     repoUrl: git@github.com:mchalapuk/offensive.js.git
     pwdVar: OFFENSIVE_PWD
     testTask: all
+    deployTask: deploy

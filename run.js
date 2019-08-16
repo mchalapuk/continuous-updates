@@ -1,9 +1,8 @@
 
-const yaml = require('js-yaml');
-const git = require('simple-git');
-const mkdir = require('mkdirp');
-const rimraf = require('rimraf');
 const fs = require('fs');
+const child = require('child_process');
+
+const yaml = require('js-yaml');
 
 const check = require('offensive').default;
 require('offensive/assertions/allElementsThat/register');
@@ -12,11 +11,16 @@ require('offensive/assertions/aString/register');
 require('offensive/assertions/allElementsThat/register');
 
 const WORKSPACE = `${__dirname}/workspace/`;
+const RUN_SCRIPT = `${__dirname}/run.sh`;
 
 cwd(__dirname);
 const config = readConfigFile();
+cwd(WORKSPACE);
 
-runAll(config.pkgs, 0);
+const status = config.pkgs
+  .map(run)
+  .reduce((a, b) => a + b);
+system.exit(status);
 
 function log(msg) {
   process.stdout.write(msg);
@@ -38,6 +42,7 @@ function readConfigFile() {
         .and.fieldThat('repoUrl', repoUrl => repoUrl.is.aString)
         .and.fieldThat('pwdVar', pwdVar => pwdVar.is.aString)
         .and.fieldThat('testTask', testTask => testTask.is.aString)
+        .and.fieldThat('deployTask', deployTask => deployTask.is.aString)
       )
     )
     ()
@@ -46,36 +51,15 @@ function readConfigFile() {
   return config;
 }
 
-function runAll(pkgs, index) {
-  if (index === pkgs.length) {
-    return;
+function run(pkg) {
+  const process = child.spawnSync(
+    RUN_SCRIPT,
+    [pkg.name, pkg.repoUrl, pkg.pwdVar, pkg.testTask, pkg.deployTask],
+    { stdio: 'inherit', cwd: WORKSPACE },
+  );
+  if (process.error) {
+    process.error;
   }
-  run(pkgs[index])
-    .then(
-      () => runAll(pkgs, index + 1),
-      err => {
-        console.error(err);
-        system.exit(1);
-      },
-    )
-  ;
-}
-
-async function run(pkg) {
-  log(`--- ${pkg.name} ---\n`);
-  cwd(WORKSPACE);
-
-  const folder = `${WORKSPACE}${pkg.name}`;
-  log(`Removing folder: ${folder}`);
-  rimraf.sync(folder);
-  log(' [success]\n');
-
-  const repo = git().silent(true);
-
-  log(`Cloning ${pkg.repoUrl}`);
-  await repo.clone(pkg.repoUrl, folder);
-  log(' [success]\n');
-
-  cwd(folder);
+  return process.status;
 }
 

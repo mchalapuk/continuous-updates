@@ -10,9 +10,6 @@
   "license": "MIT",
   "dependencies": {
     "js-yaml": "^3.13.1",
-    "mkdirp": "^0.5.1",
-    "offensive": "^2.1.5",
-    "rimraf": "^3.0.0",
-    "simple-git": "^1.124.0"
+    "offensive": "^2.1.5"
   }
 }
