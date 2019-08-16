@@ -21,18 +21,18 @@ echo -n "Adding ssh keys"
 KEY_FILE="../keys/${PKG_NAME}"
 eval "KEY_PASS=\$${PWD_VAR}"
 eval $(ssh-agent) > /dev/null
-ssh-add -D > /dev/null
-openssl rsa -in ${KEY_FILE} -passin pass:${KEY_PASS} -out ./key > /dev/null
+ssh-add -D >/dev/null 2>&1
+openssl rsa -in ${KEY_FILE} -passin pass:${KEY_PASS} -out ./key >/dev/null 2>&1
 chmod 0600 ./key
-ssh-add ./key > /dev/null
+ssh-add ./key >/dev/null 2>&1
 echo " [success]"
 
 echo -n "Cloning $REPO_URL"
-git clone $REPO_URL > /dev/null
+git clone $REPO_URL >/dev/null
 cd $FOLDER
 echo " [success]"
 
-npm install
+npm install >/dev/null 2>&1
 OUTDATED=`npm outdated`
 
 if [[ -z "$OUTDATED" ]]
@@ -50,7 +50,7 @@ echo " [success]"
 
 echo -n "Checking in dependencies to git..."
 git add .
-git commit -m "~ updated depdendencies" >> /dev/null
+git commit -m "~ updated depdendencies" >/dev/null
 echo " [success]"
 
 echo -n "Applying new version... "
@@ -61,6 +61,6 @@ npm run $DEPLOY_TASK >/dev/null
 echo " [success]"
 
 echo -n "Pushing changes to git..."
-git push >> /dev/null
+git push >/dev/null
 echo " [success]"
 
