@@ -33,15 +33,14 @@ cd $FOLDER
 echo " [success]"
 
 npm install >/dev/null 2>&1
-OUTDATED=`npm outdated`
 
-if [ -z "$OUTDATED" ]
+if [ -z "$(npm outdated)" ]
 then
   echo "All dependencies up to date. Exiting..."
   exit 0
 fi
 
-echo $OUTDATED
+npm outdated || true
 
 echo -n "Updating dependencies..."
 updtr -t "npm run $TEST_TASK" -r none
