@@ -18,7 +18,7 @@
 [offensive-travis-image]: https://api.travis-ci.org/mchalapuk/offensive.js.svg?branch=master
 [offensive-david-url]: https://david-dm.org/mchalapuk/offensive.js
 [offensive-david-image]: https://david-dm.org/mchalapuk/offensive.js.svg
-[offensive-david-url-dev]: https://david-dm.org/mchalapuk/offensive.js#info=devDependencies
+[offensive-david-url-dev]: https://david-dm.org/mchalapuk/offensive.js?type=dev
 [offensive-david-image-dev]: https://david-dm.org/mchalapuk/offensive.js/dev-status.svg
 [offensive-npm-url]: https://npmjs.org/package/offensive
 [offensive-npm-image]: https://badge.fury.io/js/offensive.svg
