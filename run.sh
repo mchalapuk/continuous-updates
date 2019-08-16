@@ -44,7 +44,13 @@ npm outdated || true
 
 echo -n "Updating dependencies..."
 updtr -t "npm run $TEST_TASK" -r none
-test -z $(npm outdated) || exit 1
+if [ -n "$(npm outdated)" ]
+then
+  echo " [failure]"
+  echo "Detected outdated after update..." >&2
+  npm outdated || true
+  exit 1
+fi
 echo " [success]"
 
 echo -n "Checking in dependencies to git..."
