@@ -8,7 +8,7 @@ PWD_VAR=$3
 TEST_TASK=$4
 DEPLOY_TASK=$5
 
-echo "--- ${PKG_NAME} ---"
+echo "\n--- ${PKG_NAME} ---\n"
 
 FOLDER="./${PKG_NAME}"
 echo -n "Removing folder: ${FOLDER}"
