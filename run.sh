@@ -29,7 +29,7 @@ git clone $REPO_URL
 cd $FOLDER
 
 npm install
-npm outdated
+npm outdated || true
 
 echo -n "Updating dependencies..."
 updtr -t "npm run $TEST_TASK"
