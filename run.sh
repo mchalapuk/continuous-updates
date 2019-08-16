@@ -28,18 +28,18 @@ ssh-add ./key >/dev/null 2>&1
 echo " [success]"
 
 echo -n "Cloning $REPO_URL"
-git clone $REPO_URL >/dev/null
+git clone $REPO_URL >/dev/null 2>&1
 cd $FOLDER
 echo " [success]"
 
 npm install >/dev/null 2>&1
 OUTDATED=`npm outdated`
 
-if [[ -z "$OUTDATED" ]]
+if [ -z "$OUTDATED" ]
 then
   echo "All dependencies up to date. Exiting..."
   exit 0
-else
+fi
 
 echo $OUTDATED
 
@@ -50,7 +50,7 @@ echo " [success]"
 
 echo -n "Checking in dependencies to git..."
 git add .
-git commit -m "~ updated depdendencies" >/dev/null
+git commit -m "~ updated depdendencies" >/dev/null 2>&1
 echo " [success]"
 
 echo -n "Applying new version... "
@@ -61,6 +61,6 @@ npm run $DEPLOY_TASK >/dev/null
 echo " [success]"
 
 echo -n "Pushing changes to git..."
-git push >/dev/null
+git push >/dev/null 2>&1
 echo " [success]"
 
