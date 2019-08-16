@@ -36,14 +36,19 @@ updtr -t "npm run $TEST_TASK" -r none
 test -z $(npm outdated) || exit 1
 echo " [success]"
 
-echo -n "Deploying new version to npm..."
+echo -n "Checking in dependencies to git..."
+git add .
+git commit -m "~ updated depdendencies"
+echo " [success]"
+
+echo -n "Applying new version... "
 npm version patch
+
+echo -n "Deploying new version to npm..."
 npm run $DEPLOY_TASK >/dev/null
 echo " [success]"
 
 echo -n "Pushing changes to git..."
-git add .
-git commit -m "~ updated depdendencies"
 git push
 echo " [success]"
 
