@@ -29,7 +29,15 @@ git clone $REPO_URL
 cd $FOLDER
 
 npm install
-npm outdated || true
+OUTDATED=`npm outdated`
+
+if [[ -z "$OUTDATED" ]]
+then
+  echo "All dependencies up to date. Exiting..."
+  exit 0
+else
+
+echo $OUTDATED
 
 echo -n "Updating dependencies..."
 updtr -t "npm run $TEST_TASK" -r none
