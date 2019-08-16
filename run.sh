@@ -16,10 +16,11 @@ rm -rf $FOLDER
 echo " [success]"
 
 echo -n "Adding ssh keys"
-KEY_FILE="../keys/$PKG_NAME"
+KEY_FILE="../keys/${PKG_NAME}"
+eval "KEY_PASS=\$${PWD_VAR}"
 eval $(ssh-agent)
 ssh-add -D
-openssl rsa -in ${KEY_FILE} -passin pass:${${PWD_VAR}} -out ./key
+openssl rsa -in ${KEY_FILE} -passin pass:${KEY_PASS} -out ./key
 chmod 0600 ./key
 ssh-add ./key
 echo " [success]"
@@ -31,10 +32,9 @@ npm install
 npm outdated
 
 updtr -t "npm run $TEST_TASK"
+npm run $DEPLOY_TASK
 
 git add .
 git commit -m "~ updated depdendencies"
 git push
-
-npm run $DEPLOY_TASK
 
