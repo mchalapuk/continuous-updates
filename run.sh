@@ -58,14 +58,14 @@ git add .
 git commit -m "~ updated depdendencies" >/dev/null 2>&1
 echo " [success]"
 
-echo -n "Applying new version... "
+echo -n "Bumping version... "
 npm version patch
 
 echo -n "Deploying new version to npm..."
 npm run $DEPLOY_TASK >/dev/null 2>&1
 echo " [success]"
 
-echo -n "Pushing changes to git..."
+echo -n "Pushing changes to origin..."
 git push >/dev/null 2>&1
 echo " [success]"
 
