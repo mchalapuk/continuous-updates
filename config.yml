@@ -14,3 +14,8 @@ pkgs:
     pwdVar: EVENT_CONNECTOR_PWD
     testTask: test
     deployTask: deploy
+  - name: gulp-query-selector
+    repoUrl: git@github.com:mchalapuk/gulp-query-selector.git
+    pwdVar: GULP_QUERY_SELECTOR_PWD
+    testTask: test
+    deployTask: deploy
