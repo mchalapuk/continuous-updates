@@ -67,5 +67,6 @@ echo " [success]"
 
 echo -n "Pushing changes to origin..."
 git push >/dev/null 2>&1
+git push --tags >/dev/null 2>&1
 echo " [success]"
 
