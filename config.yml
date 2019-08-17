@@ -4,6 +4,11 @@ pkgs:
     pwdVar: OFFENSIVE_PWD
     testTask: all
     deployTask: deploy
+  - name: fake-promise
+    repoUrl: git@github.com:mchalapuk/fake-promise.git
+    pwdVar: FAKE_PROMISE_PWD
+    testTask: clean-build
+    deployTask: deploy
   - name: wson-dom-connector
     repoUrl: git@github.com:mchalapuk/wson-dom-connector.git
     pwdVar: DOM_CONNECTOR_PWD
