@@ -4,6 +4,11 @@ pkgs:
     pwdVar: OFFENSIVE_PWD
     testTask: all
     deployTask: deploy
+  - name: wson-dom-connector
+    repoUrl: git@github.com:mchalapuk/wson-dom-connector.git
+    pwdVar: DOM_CONNECTOR_PWD
+    testTask: test
+    deployTask: deploy
   - name: wson-event-connector
     repoUrl: git@github.com:mchalapuk/wson-event-connector.git
     pwdVar: EVENT_CONNECTOR_PWD
