@@ -2,6 +2,8 @@
 
 > Automation for updating NPM dependencies
 
+## Current Status
+
 | package | version | build | dependencies | dev dependencies |
 | ------- | ------- | ----- | ------------ | ---------------- |
 | [offensive.js][offensive-repo-url] | [![NPM version][offensive-npm-image]][offensive-npm-url] | [![Build Status][offensive-travis-image]][offensive-travis-url] | [![Dependency Status][offensive-david-image]][offensive-david-url] | [![devDependency Status][offensive-david-image-dev]][offensive-david-url-dev] |
@@ -59,4 +61,9 @@
 [gulp-qs-david-image-dev]: https://david-dm.org/mchalapuk/gulp-query-selector/dev-status.svg
 [gulp-qs-npm-url]: https://npmjs.org/package/gulp-query-selector
 [gulp-qs-npm-image]: https://badge.fury.io/js/gulp-query-selector.svg
+
+## License
+
+Copyright &copy; Maciej Chałapuk 2017 - 2019.
+Released under [MIT License](LICENSE).
 
