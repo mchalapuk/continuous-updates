@@ -13,7 +13,7 @@ echo "--- ${PKG_NAME} ---"
 echo ""
 
 FOLDER="./${PKG_NAME}"
-echo -n "Removing folder: ${FOLDER}"
+echo -n "Preparing workspace: ${FOLDER}"
 rm -rf $FOLDER
 echo " [success]"
 
