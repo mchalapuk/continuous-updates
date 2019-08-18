@@ -1,4 +1,5 @@
 # Continuous Updates
+[<img src="https://travis-ci.org/mchalapuk/continuous-updates.svg?branch=master" alt="Build Status" align="right">](https://travis-ci.org/mchalapuk/continuous-updates)
 
 > Automation for updating NPM dependencies
 
