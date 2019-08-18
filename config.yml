@@ -9,6 +9,11 @@ pkgs:
     pwdVar: FAKE_PROMISE_PWD
     testTask: clean-build
     deployTask: deploy
+  - name: webpack-external-react
+    repoUrl: git@github.com:mchalapuk/webpack-external-react.git
+    pwdVar: WEBPACK_EXTERNAL_REACT_PWD
+    testTask: test
+    deployTask: deploy
   - name: wson-dom-connector
     repoUrl: git@github.com:mchalapuk/wson-dom-connector.git
     pwdVar: DOM_CONNECTOR_PWD
