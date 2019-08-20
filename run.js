@@ -1,5 +1,6 @@
 
 const fs = require('fs');
+const path = require('path');
 const child = require('child_process');
 
 const yaml = require('js-yaml');
@@ -59,7 +60,7 @@ function run(pkg) {
       stdio: 'inherit',
       cwd: WORKSPACE,
       env: {
-        PATH: process.env.PATH,
+        PATH: `${path.join(__dirname, 'node_modules/.bin')}:${process.env.PATH}`,
         [pkg.pwdVar]: process.env[pkg.pwdVar],
       },
     },
