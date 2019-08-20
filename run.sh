@@ -37,7 +37,7 @@ npm install >/dev/null 2>&1
 echo " [success]"
 
 echo -n "Checking dependency versions"
-OUTDATED=$(npm outdated)
+OUTDATED=$(npm outdated || true)
 echo " [success]"
 
 if [ -z "$OUTDATED" ]
@@ -46,11 +46,11 @@ then
   exit 0
 fi
 
-npm outdated || true
+echo -e ${OUTDATED//\n/\\n}
 
 echo -n "Found outdated dependencies. Updating..."
 updtr -t "npm run $TEST_TASK" -r none
-if [ -n "$(npm outdated)" ]
+if [ -n "$(npm outdated || true)" ]
 then
   echo " [failure]"
   echo "Detected outdated dependencies after update..." >&2
