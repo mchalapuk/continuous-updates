@@ -1,5 +1,5 @@
 pkgs:
-  - name: offensive.js
+  - name: offensive
     repoUrl: git@github.com:mchalapuk/offensive.js.git
     pwdVar: OFFENSIVE_PWD
     testTask: all
