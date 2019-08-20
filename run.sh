@@ -32,9 +32,15 @@ git clone $REPO_URL >/dev/null 2>&1
 cd $FOLDER
 echo " [success]"
 
+echo -n "Installing dependencies"
 npm install >/dev/null 2>&1
+echo " [success]"
 
-if [ -z "$(npm outdated)" ]
+echo -n "Checking dependency versions"
+OUTDATED=$(npm outdated)
+echo " [success]"
+
+if [ -z "$OUTDATED" ]
 then
   echo "All dependencies up to date. Exiting..."
   exit 0
@@ -42,7 +48,7 @@ fi
 
 npm outdated || true
 
-echo -n "Updating dependencies..."
+echo -n "Found outdated dependencies. Updating..."
 updtr -t "npm run $TEST_TASK" -r none
 if [ -n "$(npm outdated)" ]
 then
