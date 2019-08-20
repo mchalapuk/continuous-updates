@@ -46,15 +46,18 @@ then
   exit 0
 fi
 
-echo -e ${OUTDATED//\n/\\n}
+printf "$OUTDATED"
+echo ""
 
 echo -n "Found outdated dependencies. Updating..."
 updtr -t "npm run $TEST_TASK" -r none
-if [ -n "$(npm outdated || true)" ]
+OUTDATED=$(npm outdated || true)
+if [ -n "$OUTDATED" ]
 then
   echo " [failure]"
   echo "Detected outdated dependencies after update..." >&2
-  npm outdated || true
+  printf "$OUTDATED"
+  echo ""
   exit 1
 fi
 echo " [success]"
