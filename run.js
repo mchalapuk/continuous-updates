@@ -55,7 +55,7 @@ function run(pkg) {
   const process = child.spawnSync(
     RUN_SCRIPT,
     [pkg.name, pkg.repoUrl, pkg.pwdVar, pkg.testTask, pkg.deployTask],
-    { stdio: 'inherit', cwd: WORKSPACE },
+    { stdio: 'inherit', cwd: WORKSPACE, env: process.env },
   );
   if (process.error) {
     process.error;
