@@ -28,7 +28,7 @@ ssh-add ./key >/dev/null 2>&1
 echo " [success]"
 
 echo -n "Cloning $REPO_URL"
-git clone $REPO_URL >/dev/null 2>&1
+git clone $REPO_URL $FOLDER >/dev/null 2>&1
 cd $FOLDER
 echo " [success]"
 
