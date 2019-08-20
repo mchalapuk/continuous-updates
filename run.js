@@ -62,6 +62,8 @@ function run(pkg) {
       env: {
         PATH: `${path.join(__dirname, 'node_modules/.bin')}:${process.env.PATH}`,
         [pkg.pwdVar]: process.env[pkg.pwdVar],
+        USER: process.env.USER,
+        HOME: process.env.HOME,
       },
     },
   );
