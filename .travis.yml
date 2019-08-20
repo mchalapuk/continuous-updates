@@ -1,9 +1,12 @@
 language: node_js
 node_js:
   - '12'
+before_install:
+  - 'git config --global "user.name" "$GIT_USERNAME"'
+  - 'git config --global "user.email" "$GIT_EMAIL"'
+  - 'echo $NPMRC >> ~/.npmrc'
 install:
   - 'npm install'
-  - 'echo $NPMRC >> ~/.npmrc'
 script:
   - 'node ./run.js'
 

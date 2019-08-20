@@ -63,8 +63,6 @@ fi
 echo " [success]"
 
 echo -n "Checking in dependencies to git..."
-git config --global "user.name" "Maciej Chałapuk"
-git config --global "user.email" "maciej@chalapuk.pl"
 git add .
 git commit -m "~ updated depdendencies" >/dev/null 2>&1
 echo " [success]"
