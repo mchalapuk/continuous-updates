@@ -39,3 +39,7 @@ pkgs:
     pwdVar: GULP_QUERY_SELECTOR_PWD
     testTask: test
     deployTask: deploy
+  - name: continuous-updates
+    repoUrl: git@github.com:mchalapuk/continuous-updates.git
+    pwdVar: CONTINUOUS_UPDATES_PWD
+    testTask: build

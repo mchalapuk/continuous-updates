@@ -8,5 +8,5 @@ before_install:
 install:
   - 'npm install'
 script:
-  - 'node ./run.js'
+  - 'npm run build'
 
