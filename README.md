@@ -11,6 +11,7 @@
 | [fake-promise][fake-promise-repo-url] | [![NPM version][fake-promise-npm-image]][fake-promise-npm-url] | [![Build Status][fake-promise-travis-image]][fake-promise-travis-url] | [![Dependency Status][fake-promise-david-image]][fake-promise-david-url] | [![devDependency Status][fake-promise-david-image-dev]][fake-promise-david-url-dev] |
 | [webpack-external-react][webpack-er-repo-url] | [![NPM version][webpack-er-npm-image]][webpack-er-npm-url] | [![Build Status][webpack-er-travis-image]][webpack-er-travis-url] | [![Dependency Status][webpack-er-david-image]][webpack-er-david-url] | [![devDependency Status][webpack-er-david-image-dev]][webpack-er-david-url-dev] |
 | [aono-logger][aono-repo-url] | [![NPM version][aono-npm-image]][aono-npm-url] | [![Build Status][aono-travis-image]][aono-travis-url] | [![Dependency Status][aono-david-image]][aono-david-url] | [![devDependency Status][aono-david-image-dev]][aono-david-url-dev] | 
+| [aono-file-handler][aono-fh-repo-url] | [![NPM version][aono-fh-npm-image]][aono-fh-npm-url] | [![Build Status][aono-fh-travis-image]][aono-fh-travis-url] | [![Dependency Status][aono-fh-david-image]][aono-fh-david-url] | [![devDependency Status][aono-fh-david-image-dev]][aono-fh-david-url-dev] | 
 | [wson-dom-connector][wson-dc-repo-url] | [![NPM version][wson-dc-npm-image]][wson-dc-npm-url] | [![Build Status][wson-dc-travis-image]][wson-dc-travis-url] | [![Dependency Status][wson-dc-david-image]][wson-dc-david-url] | [![devDependency Status][wson-dc-david-image-dev]][wson-dc-david-url-dev] | 
 | [wson-event-connector][wson-ec-repo-url] | [![NPM version][wson-ec-npm-image]][wson-ec-npm-url] | [![Build Status][wson-ec-travis-image]][wson-ec-travis-url] | [![Dependency Status][wson-ec-david-image]][wson-ec-david-url] | [![devDependency Status][wson-ec-david-image-dev]][wson-ec-david-url-dev] |
 | [gulp-query-selector][gulp-qs-repo-url] | [![NPM version][gulp-qs-npm-image]][gulp-qs-npm-url] | [![Build Status][gulp-qs-travis-image]][gulp-qs-travis-url] | [![Dependency Status][gulp-qs-david-image]][gulp-qs-david-url] | [![devDependency Status][gulp-qs-david-image-dev]][gulp-qs-david-url-dev] |
@@ -54,6 +55,16 @@
 [aono-david-image-dev]: https://david-dm.org/aono-logger/aono/dev-status.svg
 [aono-npm-url]: https://npmjs.org/package/aono
 [aono-npm-image]: https://badge.fury.io/js/aono.svg
+
+[aono-fh-repo-url]: https://github.com/aono-logger/aono-file-handler
+[aono-fh-travis-url]: http://travis-ci.org/aono-logger/aono-file-handler
+[aono-fh-travis-image]: https://api.travis-ci.org/aono-logger/aono-file-handler.svg
+[aono-fh-david-url]: https://david-dm.org/aono-logger/aono-file-handler
+[aono-fh-david-image]: https://david-dm.org/aono-logger/aono-file-handler.svg
+[aono-fh-david-url-dev]: https://david-dm.org/aono-logger/aono-file-handler?type=dev
+[aono-fh-david-image-dev]: https://david-dm.org/aono-logger/aono-file-handler/dev-status.svg
+[aono-fh-npm-url]: https://npmjs.org/package/aono-file-handler
+[aono-fh-npm-image]: https://badge.fury.io/js/aono-file-handler.svg
 
 [wson-dc-repo-url]: https://github.com/mchalapuk/wson-dom-connector
 [wson-dc-travis-url]: http://travis-ci.org/mchalapuk/wson-dom-connector
