@@ -51,7 +51,7 @@ printf "$OUTDATED"
 echo ""
 
 echo -n "Found outdated dependencies. Updating..."
-updtr -t "npm run $TEST_TASK" -r none
+updtr -t "npm-install-peers && npm run $TEST_TASK" -r none
 OUTDATED=$(npm outdated || true)
 if [ -n "$OUTDATED" ]
 then
