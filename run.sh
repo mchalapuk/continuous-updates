@@ -34,6 +34,7 @@ echo " [success]"
 
 echo -n "Installing dependencies"
 npm install >/dev/null 2>&1
+npm-install-peers >/dev/null 2>&1
 echo " [success]"
 
 echo -n "Checking dependency versions"
