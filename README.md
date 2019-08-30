@@ -15,6 +15,7 @@
 | [wson-dom-connector][wson-dc-repo-url] | [![NPM version][wson-dc-npm-image]][wson-dc-npm-url] | [![Build Status][wson-dc-travis-image]][wson-dc-travis-url] | [![Dependency Status][wson-dc-david-image]][wson-dc-david-url] | [![devDependency Status][wson-dc-david-image-dev]][wson-dc-david-url-dev] | 
 | [wson-event-connector][wson-ec-repo-url] | [![NPM version][wson-ec-npm-image]][wson-ec-npm-url] | [![Build Status][wson-ec-travis-image]][wson-ec-travis-url] | [![Dependency Status][wson-ec-david-image]][wson-ec-david-url] | [![devDependency Status][wson-ec-david-image-dev]][wson-ec-david-url-dev] |
 | [gulp-query-selector][gulp-qs-repo-url] | [![NPM version][gulp-qs-npm-image]][gulp-qs-npm-url] | [![Build Status][gulp-qs-travis-image]][gulp-qs-travis-url] | [![Dependency Status][gulp-qs-david-image]][gulp-qs-david-url] | [![devDependency Status][gulp-qs-david-image-dev]][gulp-qs-david-url-dev] |
+| [continuous-updates][this-repo-url] | [![NPM version][this-npm-image]][this-npm-url] | [![Build Status][this-travis-image]][this-travis-url] | [![Dependency Status][this-david-image]][this-david-url] | [![devDependency Status][this-david-image-dev]][this-david-url-dev] |
 
 [offensive-repo-url]: https://github.com/mchalapuk/offensive.js
 [offensive-travis-url]: http://travis-ci.org/mchalapuk/offensive.js
@@ -95,6 +96,16 @@
 [gulp-qs-david-image-dev]: https://david-dm.org/mchalapuk/gulp-query-selector/dev-status.svg
 [gulp-qs-npm-url]: https://npmjs.org/package/gulp-query-selector
 [gulp-qs-npm-image]: https://badge.fury.io/js/gulp-query-selector.svg
+
+[this-repo-url]: https://github.com/mchalapuk/continuous-updates.js
+[this-travis-url]: http://travis-ci.org/mchalapuk/continuous-updates.js
+[this-travis-image]: https://api.travis-ci.org/mchalapuk/continuous-updates.js.svg?branch=master
+[this-david-url]: https://david-dm.org/mchalapuk/continuous-updates.js
+[this-david-image]: https://david-dm.org/mchalapuk/continuous-updates.js.svg
+[this-david-url-dev]: https://david-dm.org/mchalapuk/continuous-updates.js?type=dev
+[this-david-image-dev]: https://david-dm.org/mchalapuk/continuous-updates.js/dev-status.svg
+[this-npm-url]: https://npmjs.org/package/continuous-updates
+[this-npm-image]: https://badge.fury.io/js/continuous-updates.svg
 
 ## License
 
