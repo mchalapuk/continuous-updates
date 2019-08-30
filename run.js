@@ -43,7 +43,7 @@ function readConfigFile() {
         .and.fieldThat('repoUrl', repoUrl => repoUrl.is.aString)
         .and.fieldThat('pwdVar', pwdVar => pwdVar.is.aString)
         .and.fieldThat('testTask', testTask => testTask.is.aString)
-        .and.fieldThat('deployTask', deployTask => deployTask.is.aString)
+        .and.fieldThat('deployTask', deployTask => deployTask.is.aString.or.Undefined)
       )
     )
     ()
@@ -55,7 +55,7 @@ function readConfigFile() {
 function run(pkg) {
   const childProc = child.spawnSync(
     RUN_SCRIPT,
-    [pkg.name, pkg.repoUrl, pkg.pwdVar, pkg.testTask, pkg.deployTask],
+    [pkg.name, pkg.repoUrl, pkg.pwdVar, pkg.testTask, pkg.deployTask || ""],
     {
       stdio: 'inherit',
       cwd: WORKSPACE,

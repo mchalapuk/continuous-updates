@@ -71,9 +71,14 @@ echo " [success]"
 echo -n "Bumping version... "
 npm version patch
 
-echo -n "Deploying new version to npm..."
-npm run $DEPLOY_TASK >/dev/null 2>&1
-echo " [success]"
+if [ -n "$DEPLOY_TASK" ]
+then
+  echo -n "Deploying new version to npm..."
+  npm run $DEPLOY_TASK >/dev/null 2>&1
+  echo " [success]"
+else
+  echo "No deploy task. Skipping deploy..."
+fi
 
 echo -n "Pushing changes to origin..."
 git push >/dev/null 2>&1
