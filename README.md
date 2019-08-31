@@ -1,6 +1,7 @@
 # Continuous Updates
 [<img src="https://travis-ci.org/mchalapuk/continuous-updates.svg?branch=master" alt="Build Status">](https://travis-ci.org/mchalapuk/continuous-updates)
 [<img src="https://david-dm.org/mchalapuk/continuous-updates.svg" alt="Build Status">](https://david-dm.org/mchalapuk/continuous-updates)
+[<img src="https://david-dm.org/mchalapuk/continuous-updates/dev-status.svg" alt="Build Status">](https://david-dm.org/mchalapuk/continuous-updates?type=dev)
 
 > Automation for updating NPM dependencies :space_invader:
 
