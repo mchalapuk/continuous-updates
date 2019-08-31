@@ -42,4 +42,4 @@ pkgs:
   - name: continuous-updates
     repoUrl: git@github.com:mchalapuk/continuous-updates.git
     pwdVar: CONTINUOUS_UPDATES_PWD
-    testTask: start
+    testTask: nothing

@@ -4,7 +4,7 @@
   "description": "Automation for updating NPM dependencies",
   "main": "index.js",
   "scripts": {
-    "start": "node ./run.js"
+    "nothing": "echo DONE"
   },
   "private": true,
   "author": "",
