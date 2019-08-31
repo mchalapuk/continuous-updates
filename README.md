@@ -1,5 +1,6 @@
 # Continuous Updates
 [<img src="https://travis-ci.org/mchalapuk/continuous-updates.svg?branch=master" alt="Build Status" align="right">](https://travis-ci.org/mchalapuk/continuous-updates)
+[<img src="https://david-dm.org/mchalapuk/continuous-updates.svg" alt="Build Status" align="right">](https://david-dm.org/mchalapuk/continuous-updates)
 
 > Automation for updating NPM dependencies :space_invader:
 
@@ -96,15 +97,6 @@
 [gulp-qs-david-image-dev]: https://david-dm.org/mchalapuk/gulp-query-selector/dev-status.svg
 [gulp-qs-npm-url]: https://npmjs.org/package/gulp-query-selector
 [gulp-qs-npm-image]: https://badge.fury.io/js/gulp-query-selector.svg
-
-[this-repo-url]: https://github.com/mchalapuk/continuous-updates
-[this-travis-url]: http://travis-ci.org/mchalapuk/continuous-updates
-[this-travis-image]: https://api.travis-ci.org/mchalapuk/continuous-updates.svg?branch=master
-[this-david-url]: https://david-dm.org/mchalapuk/continuous-updates
-[this-david-image]: https://david-dm.org/mchalapuk/continuous-updates.svg
-[this-david-url-dev]: https://david-dm.org/mchalapuk/continuous-updates?type=dev
-[this-david-image-dev]: https://david-dm.org/mchalapuk/continuous-updates/dev-status.svg
-[this-npm-image]: ./private.svg
 
 ## License
 
