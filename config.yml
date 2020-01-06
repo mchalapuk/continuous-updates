@@ -24,6 +24,11 @@ pkgs:
     pwdVar: AONO_FH_PWD
     testTask: clean-build
     deployTask: deploy
+  - name: aono-console-handler
+    repoUrl: git@github.com:aono-logger/aono-console-handler.git
+    pwdVar: AONO_CH_PWD
+    testTask: clean-build
+    deployTask: deploy
   - name: wson-dom-connector
     repoUrl: git@github.com:mchalapuk/wson-dom-connector.git
     pwdVar: DOM_CONNECTOR_PWD
