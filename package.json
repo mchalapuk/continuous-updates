@@ -1,6 +1,6 @@
 {
   "name": "continuous-updates",
-  "version": "0.0.62",
+  "version": "0.0.63",
   "description": "Automation for updating NPM dependencies",
   "main": "index.js",
   "scripts": {
