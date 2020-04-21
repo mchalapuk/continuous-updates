@@ -12,7 +12,7 @@
   "dependencies": {
     "js-yaml": "^3.13.1",
     "npm-install-peers": "^1.2.1",
-    "offensive": "^2.4.2",
+    "offensive": "^2.4.3",
     "updtr": "^3.1.0"
   }
 }
