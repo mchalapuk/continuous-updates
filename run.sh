@@ -123,7 +123,7 @@ echo ""
 echo "--- ${PKG_NAME} ---"
 echo ""
 
-trap EXIT 'killall ssh-agent'
+trap 'killall ssh-agent' EXIT
 
 cmd "Preparing workspace: ${FOLDER}" "prepare_workspace"
 cmd "Adding ssh keys" "add_ssh_keys"
