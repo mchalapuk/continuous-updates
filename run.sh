@@ -68,6 +68,7 @@ cmd() {
     log_success
   else
     log_failure
+    echo $$ $(red "$CMD")
     cat $LOG_FILE
   fi
 
@@ -88,7 +89,7 @@ add_ssh_keys() {
 }
 
 clone() {
-  git clone -q $REPO_URL $FOLDER 
+  git clone $REPO_URL $FOLDER 
   cd $FOLDER
 }
 
