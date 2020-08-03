@@ -14,8 +14,11 @@ red() {
 green() {
   echo -e "\e[92m$@\e[0m"
 }
+blue() {
+  echo -e "\e[36m$@\e[0m"
+}
 bold() {
-  echo -e "\e[1m$@\e[0m"
+  echo -e "\e[1m$@\e[21m"
 }
 
 usage() {
@@ -34,6 +37,7 @@ test -n "$TEST_TASK" || die $(usage)
 
 FOLDER="./${PKG_NAME}"
 KEY_FILE="../keys/${PKG_NAME}"
+SSH_ENV="$HOME/.ssh/environment"
 eval "KEY_PASS=\$${PWD_VAR}"
 
 log_success() {
@@ -50,7 +54,7 @@ turn_red() {
   done </dev/stdin
 }
 
-cmd() {
+step() {
   TITLE=$1
   CMD=$2
 
@@ -68,7 +72,6 @@ cmd() {
     log_success
   else
     log_failure
-    echo \$ $(red $CMD)
     cat $LOG_FILE
   fi
 
@@ -76,60 +79,70 @@ cmd() {
   return $RETVAL
 }
 
+cmd() {
+  echo "\$ $(blue $@)"
+  eval "$@"
+}
+
 prepare_workspace() {
-  rm -rf $FOLDER
+  cmd rm -rf $FOLDER
 }
 
 add_ssh_keys() {
-  SSH_ENV="$HOME/.ssh/environment"
-  (umask 066; ssh-agent > $SSH_ENV)
-  . $SSH_ENV
+  (umask 066; cmd "ssh-agent > $SSH_ENV")
+  cmd . $SSH_ENV
 
-  ssh-add -D
-  openssl rsa -in ${KEY_FILE} -passin pass:${KEY_PASS} -out ./key
-  chmod 0600 ./key
-  ssh-add ./key
+  cmd ssh-add -D
+  cmd openssl rsa -in ${KEY_FILE} -passin pass:${KEY_PASS} -out ./key
+  cmd chmod 0600 ./key
+  cmd ssh-add ./key
 }
 
 clone() {
-  git clone $REPO_URL $FOLDER 
-  cd $FOLDER
+  cmd . $SSH_ENV
+  cmd git clone $REPO_URL $FOLDER 
+  cmd cd $FOLDER
 }
 
 install_dependencies() {
-  npm install
-  npm-install-peers
+  cmd npm install
+  cmd npm-install-peers
 }
 
 commit_updates() {
-  git add .
-  git commit -m "~ updated depdendencies"
+  cmd git add .
+  cmd git commit -m "~ updated depdendencies"
 }
 
 bump_version() {
-  npm version patch
+  cmd npm version patch
 }
 
 deploy() {
-  npm run $DEPLOY_TASK
+  cmd npm run $DEPLOY_TASK
 }
 
 push_updates() {
-  git push
-  git push --tags
+  cmd . $SSH_ENV
+  cmd git push
+  cmd git push --tags
+}
+
+kill_ssh_agent() {
+  . $SSH_ENV
+  eval $(ssh-agent -k) >/dev/null 2>&1 || true
 }
 
 echo ""
 echo "--- ${PKG_NAME} ---"
 echo ""
 
-trap 'killall ssh-agent' EXIT
+trap 'kill_ssh_agent' EXIT
 
-cmd "Preparing workspace: ${FOLDER}" "prepare_workspace"
-cmd "Adding ssh keys" "add_ssh_keys"
-ssh-add -l
-cmd "Cloning $REPO_URL" "clone"
-cmd "Installing dependencies" "install_dependencies"
+step "Preparing workspace: ${FOLDER}" "prepare_workspace"
+step "Adding ssh keys" "add_ssh_keys"
+step "Cloning $REPO_URL" "clone"
+step "Installing dependencies" "install_dependencies"
 
 echo -n $(bold "Checking dependency versions")
 OUTDATED=$(npm outdated || true)
@@ -156,12 +169,12 @@ then
 fi
 log_success
 
-cmd "Checking in dependencies to git..." "commit_updates"
-cmd "Bumping version... " "bump_version"
+step "Checking in dependencies to git..." "commit_updates"
+step "Bumping version... " "bump_version"
 
 if [ -n "$DEPLOY_TASK" ]
 then
-  cmd "Deploying new version to npm..." "deploy"
+  step "Deploying new version to npm..." "deploy"
 else
   echo "No deploy task. Skipping deploy..."
 fi
