@@ -8,10 +8,6 @@ PWD_VAR=$3
 TEST_TASK=$4
 DEPLOY_TASK=$5
 
-FOLDER="./${PKG_NAME}"
-KEY_FILE="../keys/${PKG_NAME}"
-eval "KEY_PASS=\$${PWD_VAR}"
-
 red() {
   echo -e "\e[91m$@\e[0m"
 }
@@ -21,6 +17,24 @@ green() {
 bold() {
   echo -e "\e[1m$@\e[0m"
 }
+
+usage() {
+  echo "Usage: $0 <pkg-name> <repo-url> <key-password-var> <test-task> [deploy-task]"
+}
+
+die() {
+  red $@ >&2
+  exit 1
+}
+
+test -n "$PKG_NAME" || die $(usage)
+test -n "$REPO_URL" || die $(usage)
+test -n "$PWD_VAR" || die $(usage)
+test -n "$TEST_TASK" || die $(usage)
+
+FOLDER="./${PKG_NAME}"
+KEY_FILE="../keys/${PKG_NAME}"
+eval "KEY_PASS=\$${PWD_VAR}"
 
 log_success() {
   green " $(bold ✔)"
@@ -55,8 +69,6 @@ prepare_workspace() {
 }
 
 add_ssh_keys() {
-  set -x
-
   eval $(ssh-agent)
   ssh-add -D
   openssl rsa -in ${KEY_FILE} -passin pass:${KEY_PASS} -out ./key
