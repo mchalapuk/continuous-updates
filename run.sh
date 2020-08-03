@@ -122,6 +122,7 @@ echo ""
 
 cmd "Preparing workspace: ${FOLDER}" "prepare_workspace"
 cmd "Adding ssh keys" "add_ssh_keys"
+ssh-add -l
 cmd "Cloning $REPO_URL" "clone"
 cmd "Installing dependencies" "install_dependencies"
 
