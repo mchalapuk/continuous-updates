@@ -1,6 +1,7 @@
 #!/bin/bash
 
 set -e
+set -x
 
 PKG_NAME=$1
 REPO_URL=$2
@@ -36,7 +37,7 @@ cmd() {
   STDOUT=$(mktemp /tmp/cha80s_cu_XXXXX)
 
   echo -n $(bold "$TITLE")
-  if $CMD 1>$STDOUT 2> >(red >$STDOUT)
+  if $CMD 1>$STDOUT 2> >(red)>&1
   then
     log_success
     RETVAL=0
