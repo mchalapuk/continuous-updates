@@ -81,7 +81,10 @@ prepare_workspace() {
 }
 
 add_ssh_keys() {
-  eval $(ssh-agent)
+  SSH_ENV="$HOME/.ssh/environment"
+  (umask 066; ssh-agent > $SSH_ENV)
+  . $SSH_ENV
+
   ssh-add -D
   openssl rsa -in ${KEY_FILE} -passin pass:${KEY_PASS} -out ./key
   chmod 0600 ./key
@@ -119,6 +122,8 @@ push_updates() {
 echo ""
 echo "--- ${PKG_NAME} ---"
 echo ""
+
+trap EXIT 'killall ssh-agent'
 
 cmd "Preparing workspace: ${FOLDER}" "prepare_workspace"
 cmd "Adding ssh keys" "add_ssh_keys"
