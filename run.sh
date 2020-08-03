@@ -22,7 +22,7 @@ bold() {
   echo -u "\e[1m$@\e[0m"
 }
 
-log_uccess() {
+log_success() {
   green " $(bold ✔)"
 }
 log_failure() {
