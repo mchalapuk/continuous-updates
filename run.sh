@@ -36,7 +36,7 @@ cmd() {
   STDOUT=$(mktemp /tmp/cha80s_cu_XXXXX)
 
   echo -n $(bold "$TITLE")
-  if $CMD 1>$STDOUT 2> >(red)>&1
+  if $CMD 1>$STDOUT 2> >(red >$STDOUT)
   then
     log_success
     RETVAL=0
