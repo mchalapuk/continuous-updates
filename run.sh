@@ -18,7 +18,7 @@ blue() {
   echo -e "\e[36m$@\e[0m"
 }
 bold() {
-  echo -e "\e[1m$@\e[21m"
+  echo -e "\e[1m$@\e[0m"
 }
 
 usage() {
@@ -130,10 +130,9 @@ push_updates() {
 
 kill_ssh_agent() {
   . $SSH_ENV
-  eval $(ssh-agent -k) >/dev/null 2>&1 || true
+  eval $(ssh-agent -k) >/dev/null 2>&1
 }
 
-echo ""
 echo "--- ${PKG_NAME} ---"
 echo ""
 
@@ -180,4 +179,5 @@ else
 fi
 
 cmd "Pushing changes to origin..." "push_updates"
+echo ""
 

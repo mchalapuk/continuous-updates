@@ -18,6 +18,9 @@ cwd(__dirname);
 const config = readConfigFile();
 cwd(WORKSPACE);
 
+// nice padding
+console.log('')
+
 const status = config.pkgs
   .map(run)
   .reduce((a, b) => a + b);
@@ -71,7 +74,9 @@ function run(pkg) {
   if (childProc.error) {
     log(childProc.error.message);
   }
-  log(`Child process returned ${childProc.status}`);
+  if (childProc.status !== 0) {
+    log(`Child process returned ${childProc.status}`);
+  }
   if (childProc.stderr) {
     log(`Child process stderr:`);
     log(`${childProc.stderr}`);
