@@ -68,7 +68,7 @@ cmd() {
     log_success
   else
     log_failure
-    echo $$ $(red "$CMD")
+    echo \$ $(red $CMD)
     cat $LOG_FILE
   fi
 
