@@ -43,24 +43,35 @@ log_failure() {
   red " $(bold ✗)"
 }
 
+turn_red() {
+  while read LINE
+  do
+    red $LINE
+  done </dev/stdin
+}
+
 cmd() {
   TITLE=$1
   CMD=$2
 
-  STDOUT=$(mktemp /tmp/cha80s_cu_XXXXX)
-
   echo -n $(bold "$TITLE")
-  if $CMD 1>$STDOUT 2> >(red)>&1
+
+  LOG_FILE=$(mktemp /tmp/cha80s_cu_XXXXX)
+  # Running command with both stdout and stderr redirected to the same
+  # log file but stderr colored red. This preserves both message order
+  # and info about stream instance.
+  { $CMD 2>&1 1>&3 3>&- | turn_red >&3; } 3>$LOG_FILE
+  RETVAL="${PIPESTATUS[0]}"
+
+  if [[ "$RETVAL" == "0" ]]
   then
     log_success
-    RETVAL=0
   else
     log_failure
-    cat $STDOUT
-    RETVAL=1
+    cat $LOG_FILE
   fi
 
-  rm $STDOUT
+  rm $LOG_FILE
   return $RETVAL
 }
 
@@ -113,7 +124,7 @@ cmd "Adding ssh keys" "add_ssh_keys"
 cmd "Cloning $REPO_URL" "clone"
 cmd "Installing dependencies" "install_dependencies"
 
-bold "Checking dependency versions"
+echo -n $(bold "Checking dependency versions")
 OUTDATED=$(npm outdated || true)
 log_success
 if [ -z "$OUTDATED" ]
