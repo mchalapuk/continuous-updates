@@ -1,7 +1,6 @@
 #!/bin/bash
 
 set -e
-set -x
 
 PKG_NAME=$1
 REPO_URL=$2
@@ -56,6 +55,8 @@ prepare_workspace() {
 }
 
 add_ssh_keys() {
+  set -x
+
   eval $(ssh-agent)
   ssh-add -D
   openssl rsa -in ${KEY_FILE} -passin pass:${KEY_PASS} -out ./key

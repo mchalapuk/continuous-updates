@@ -68,11 +68,10 @@ function run(pkg) {
     },
   );
 
-  const { error, status } = childProc;
-  if (error) {
-    log(error);
+  if (childProc.error) {
+    log(childProc.error);
   }
-  log(`Child process returned ${status}`);
+  log(`Child process returned ${childProc.status}`);
   return childProc.status;
 }
 
