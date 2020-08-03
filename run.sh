@@ -13,13 +13,13 @@ KEY_FILE="../keys/${PKG_NAME}"
 eval "KEY_PASS=\$${PWD_VAR}"
 
 red() {
-  echo -u "\e[91m$@\e[0m"
+  echo -e "\e[91m$@\e[0m"
 }
 green() {
-  echo -u "\e[92m$@\e[0m"
+  echo -e "\e[92m$@\e[0m"
 }
 bold() {
-  echo -u "\e[1m$@\e[0m"
+  echo -e "\e[1m$@\e[0m"
 }
 
 log_success() {
@@ -42,7 +42,7 @@ cmd() {
     RETVAL=0
   else
     log_failure
-    echo $STDOUT
+    cat $STDOUT
     RETVAL=1
   fi
 
