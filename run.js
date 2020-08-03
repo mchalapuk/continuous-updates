@@ -24,7 +24,7 @@ const status = config.pkgs
 process.exit(status);
 
 function log(msg) {
-  process.stdout.write(msg);
+  process.stdout.write(`${msg}\n`);
 }
 
 function cwd(dir) {
@@ -69,9 +69,13 @@ function run(pkg) {
   );
 
   if (childProc.error) {
-    log(childProc.error);
+    log(childProc.error.message);
   }
   log(`Child process returned ${childProc.status}`);
+  if (childProc.stderr) {
+    log(`Child process stderr:`);
+    log(`${childProc.stderr}`);
+  }
   return childProc.status;
 }
 
