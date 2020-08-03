@@ -5,6 +5,7 @@ before_install:
   - 'git config --global "user.name" "$GIT_USERNAME"'
   - 'git config --global "user.email" "$GIT_EMAIL"'
   - 'echo $NPMRC >> ~/.npmrc'
+  - 'echo "progress=false" >> ~/.npmrc'
 install:
   - 'npm install'
 script:

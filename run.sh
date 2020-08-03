@@ -20,21 +20,21 @@ echo " [success]"
 echo -n "Adding ssh keys"
 KEY_FILE="../keys/${PKG_NAME}"
 eval "KEY_PASS=\$${PWD_VAR}"
-eval $(ssh-agent) > /dev/null
-ssh-add -D >/dev/null 2>&1
-openssl rsa -in ${KEY_FILE} -passin pass:${KEY_PASS} -out ./key >/dev/null 2>&1
+eval $(ssh-agent) >/dev/null
+ssh-add -D -q 
+openssl rsa -in ${KEY_FILE} -passin pass:${KEY_PASS} -out ./key >/dev/null
 chmod 0600 ./key
-ssh-add ./key >/dev/null 2>&1
+ssh-add -q ./key
 echo " [success]"
 
 echo -n "Cloning $REPO_URL"
-git clone $REPO_URL $FOLDER >/dev/null 2>&1
+git clone -q $REPO_URL $FOLDER 
 cd $FOLDER
 echo " [success]"
 
 echo -n "Installing dependencies"
-npm install >/dev/null 2>&1
-npm-install-peers >/dev/null 2>&1
+npm install
+npm-install-peers
 echo " [success]"
 
 echo -n "Checking dependency versions"
@@ -65,7 +65,7 @@ echo " [success]"
 
 echo -n "Checking in dependencies to git..."
 git add .
-git commit -m "~ updated depdendencies" >/dev/null 2>&1
+git commit -q -m "~ updated depdendencies"
 echo " [success]"
 
 echo -n "Bumping version... "
@@ -74,14 +74,14 @@ npm version patch
 if [ -n "$DEPLOY_TASK" ]
 then
   echo -n "Deploying new version to npm..."
-  npm run $DEPLOY_TASK >/dev/null 2>&1
+  npm run --silent $DEPLOY_TASK >/dev/null
   echo " [success]"
 else
   echo "No deploy task. Skipping deploy..."
 fi
 
 echo -n "Pushing changes to origin..."
-git push >/dev/null 2>&1
-git push --tags >/dev/null 2>&1
+git push -q
+git push -q --tags
 echo " [success]"
 
