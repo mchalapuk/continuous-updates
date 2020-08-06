@@ -20,12 +20,6 @@ blue() {
 bold() {
   echo -e "\e[1m$@\e[0m"
 }
-dim() {
-  printf "$@" | while read LINE
-  do
-    [[ "$LINE" == "" ]] || echo -e "\e[2m$@\e[0m"
-  done
-}
 
 usage() {
   echo "Usage: $0 <pkg-name> <repo-url> <key-password-var> <test-task> [deploy-task]"
@@ -144,7 +138,7 @@ step "Preparing workspace: ${FOLDER}" "prepare_workspace"
 step "Adding ssh keys" "add_ssh_keys"
 step "Cloning $REPO_URL" "clone"
 cd $FOLDER
-dim "cwd: $(pwd)"
+echo "cwd: $(pwd)"
 
 step "Installing dependencies" "install_dependencies"
 
@@ -153,11 +147,12 @@ OUTDATED=$(npm outdated || true)
 log_success
 if [ -z "$OUTDATED" ]
 then
-  echo $(dim "All dependencies up to date. Exiting...")
+  echo "All dependencies up to date. Exiting..."
   exit 0
 fi
 
-dim "$OUTDATED"
+echo ""
+echo "$OUTDATED"
 echo ""
 
 echo -n $(bold "Found outdated dependencies. Updating...")
@@ -167,7 +162,8 @@ if [ -n "$OUTDATED" ]
 then
   log_failure
   red "Detected outdated dependencies after update..." >&2
-  dim "$OUTDATED"
+  echo ""
+  echo "$OUTDATED"
   echo ""
   exit 1
 fi
