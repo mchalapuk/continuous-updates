@@ -101,7 +101,6 @@ add_ssh_keys() {
 clone() {
   cmd . $SSH_ENV
   cmd git clone $REPO_URL $FOLDER 
-  cmd cd $FOLDER
 }
 
 install_dependencies() {
@@ -145,6 +144,10 @@ trap 'print_padding' EXIT
 step "Preparing workspace: ${FOLDER}" "prepare_workspace"
 step "Adding ssh keys" "add_ssh_keys"
 step "Cloning $REPO_URL" "clone"
+
+cd $FOLDER
+echo "cwd: $(cwd)"
+
 step "Installing dependencies" "install_dependencies"
 
 echo -n $(bold "Checking dependency versions")
