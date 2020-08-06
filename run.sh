@@ -110,7 +110,7 @@ install_dependencies() {
 
 commit_updates() {
   cmd git add .
-  cmd git commit -m "~ updated depdendencies"
+  cmd git commit -m \"~ updated depdendencies\"
 }
 
 bump_version() {
@@ -132,21 +132,14 @@ kill_ssh_agent() {
   eval $(ssh-agent -k 2>/dev/null) >/dev/null
 }
 
-print_padding() {
-  echo ""
-  echo "---"
-  echo ""
-}
-
 trap 'kill_ssh_agent' EXIT
-trap 'print_padding' EXIT
 
 step "Preparing workspace: ${FOLDER}" "prepare_workspace"
 step "Adding ssh keys" "add_ssh_keys"
 step "Cloning $REPO_URL" "clone"
 
 cd $FOLDER
-echo "cwd: $(cwd)"
+echo "cwd: $(pwd)"
 
 step "Installing dependencies" "install_dependencies"
 

@@ -81,6 +81,7 @@ function run(pkg) {
     log(`Child process stderr:`);
     log(`${childProc.stderr}`);
   }
+  log('\n---\n');
   return childProc.status;
 }
 
