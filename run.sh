@@ -129,7 +129,8 @@ push_updates() {
 
 kill_ssh_agent() {
   . $SSH_ENV
-  eval $(ssh-agent -k 2>/dev/null) >/dev/null
+  kill $SSH_AGENT_PID >/dev/null 2>&1
+  rm $SSH_ENV
 }
 
 trap 'kill_ssh_agent' EXIT
@@ -146,7 +147,7 @@ OUTDATED=$(npm outdated || true)
 log_success
 if [ -z "$OUTDATED" ]
 then
-  echo "All dependencies up to date. Exiting..."
+  echo "Up to date 👌"
   exit 0
 fi
 
