@@ -178,5 +178,5 @@ else
   echo "No deploy task. Skipping deploy..."
 fi
 
-cmd "Pushing changes to origin..." "push_updates"
+step "Pushing changes to origin..." "push_updates"
 
