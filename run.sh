@@ -137,11 +137,7 @@ trap 'kill_ssh_agent' EXIT
 step "Preparing workspace: ${FOLDER}" "prepare_workspace"
 step "Adding ssh keys" "add_ssh_keys"
 step "Cloning $REPO_URL" "clone"
-
 cd $FOLDER
-echo ""
-echo "cwd: $(pwd)"
-echo ""
 
 step "Installing dependencies" "install_dependencies"
 
