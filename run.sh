@@ -129,11 +129,11 @@ push_updates() {
 
 kill_ssh_agent() {
   . $SSH_ENV
-  kill $SSH_AGENT_PID >/dev/null 2>&1
+  kill $SSH_AGENT_PID
   rm $SSH_ENV
 }
 
-trap 'kill_ssh_agent' EXIT
+trap 'kill_ssh_agent > /dev/null' EXIT
 
 step "Preparing workspace: ${FOLDER}" "prepare_workspace"
 step "Adding ssh keys" "add_ssh_keys"
