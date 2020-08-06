@@ -23,7 +23,7 @@ bold() {
 dim() {
   printf "$@" | while read LINE
   do
-    echo -e "\e[2m$@\e[0m"
+    [[ "$LINE" == "" ]] || echo -e "\e[2m$@\e[0m"
   done
 }
 
@@ -144,7 +144,7 @@ step "Preparing workspace: ${FOLDER}" "prepare_workspace"
 step "Adding ssh keys" "add_ssh_keys"
 step "Cloning $REPO_URL" "clone"
 cd $FOLDER
-echo $(dim "cwd: $(pwd)")
+dim "cwd: $(pwd)"
 
 step "Installing dependencies" "install_dependencies"
 

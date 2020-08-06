@@ -51,7 +51,7 @@ function readConfigFile() {
     )
     ()
   ;
-  log(' [success]\n');
+  log(' ✔\n');
   return config;
 }
 
