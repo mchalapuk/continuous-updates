@@ -20,6 +20,9 @@ blue() {
 bold() {
   echo -e "\e[1m$@\e[0m"
 }
+dim() {
+  echo -e "\e[2m$@\e[0m"
+}
 
 usage() {
   echo "Usage: $0 <pkg-name> <repo-url> <key-password-var> <test-task> [deploy-task]"
@@ -137,9 +140,8 @@ trap 'kill_ssh_agent' EXIT
 step "Preparing workspace: ${FOLDER}" "prepare_workspace"
 step "Adding ssh keys" "add_ssh_keys"
 step "Cloning $REPO_URL" "clone"
-
 cd $FOLDER
-echo "cwd: $(pwd)"
+echo $(dim "cwd: $(pwd)")
 
 step "Installing dependencies" "install_dependencies"
 
@@ -148,14 +150,14 @@ OUTDATED=$(npm outdated || true)
 log_success
 if [ -z "$OUTDATED" ]
 then
-  echo "All dependencies up to date. Exiting..."
+  echo $(dim "All dependencies up to date. Exiting...")
   exit 0
 fi
 
-printf "$OUTDATED"
+printf $(dim "$OUTDATED")
 echo ""
 
-echo -n "Found outdated dependencies. Updating..."
+echo -n $(bold "Found outdated dependencies. Updating...")
 updtr -t "npm-install-peers && npm run $TEST_TASK" -r none
 OUTDATED=$(npm outdated || true)
 if [ -n "$OUTDATED" ]
