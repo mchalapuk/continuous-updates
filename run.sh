@@ -21,7 +21,7 @@ bold() {
   echo -e "\e[1m$@\e[0m"
 }
 dim() {
-  printf $@ | while read LINE
+  printf "$@" | while read LINE
   do
     echo -e "\e[2m$@\e[0m"
   done
@@ -157,7 +157,7 @@ then
   exit 0
 fi
 
-printf $(dim "$OUTDATED")
+dim "$OUTDATED"
 echo ""
 
 echo -n $(bold "Found outdated dependencies. Updating...")
@@ -166,8 +166,8 @@ OUTDATED=$(npm outdated || true)
 if [ -n "$OUTDATED" ]
 then
   log_failure
-  echo "Detected outdated dependencies after update..." >&2
-  printf "$OUTDATED"
+  red "Detected outdated dependencies after update..." >&2
+  dim "$OUTDATED"
   echo ""
   exit 1
 fi
