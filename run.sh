@@ -17,6 +17,9 @@ green() {
 blue() {
   echo -e "\e[36m$@\e[0m"
 }
+yellow() {
+  echo -e "\e[33m$@\e[0m"
+}
 bold() {
   echo -e "\e[1m$@\e[0m"
 }
@@ -147,7 +150,7 @@ OUTDATED=$(npm outdated || true)
 log_success
 if [ -z "$OUTDATED" ]
 then
-  echo "Up to date 👌"
+  green "UP TO DATE ヾ(-_- )ゞ"
   exit 0
 fi
 
@@ -155,7 +158,7 @@ echo ""
 echo "$OUTDATED"
 echo ""
 
-echo -n $(bold "Found outdated dependencies. Updating...")
+echo -n $(bold "Updating dependencies")
 updtr -t "npm-install-peers && npm run $TEST_TASK" -r none
 OUTDATED=$(npm outdated || true)
 if [ -n "$OUTDATED" ]
@@ -181,3 +184,4 @@ else
   echo "No deploy task. Skipping deploy..."
 fi
 
+yellow "UPDATED (҂⌣̀_⌣́)"
