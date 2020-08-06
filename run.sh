@@ -21,7 +21,10 @@ bold() {
   echo -e "\e[1m$@\e[0m"
 }
 dim() {
-  echo -e "\e[2m$@\e[0m"
+  printf $@ | while read LINE
+  do
+    echo -e "\e[2m$@\e[0m"
+  done
 }
 
 usage() {
@@ -172,13 +175,13 @@ log_success
 
 step "Checking in dependencies to git..." "commit_updates"
 step "Bumping version... " "bump_version"
+step "Pushing changes to origin..." "push_updates"
 
 if [ -n "$DEPLOY_TASK" ]
+
 then
   step "Deploying new version to npm..." "deploy"
 else
   echo "No deploy task. Skipping deploy..."
 fi
-
-step "Pushing changes to origin..." "push_updates"
 
