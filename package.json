@@ -10,7 +10,7 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "js-yaml": "^3.14.1",
+    "js-yaml": "^4.0.0",
     "npm-install-peers": "^1.2.1",
     "offensive": "^2.7.40",
     "updtr": "^3.1.0"
